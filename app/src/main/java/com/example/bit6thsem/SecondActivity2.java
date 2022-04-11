@@ -57,7 +57,9 @@ public class SecondActivity2
         recyclerView.setLayoutManager(layoutManager);
 
         //data can be passed to the adapter class as a
-        CustomerViewAdapter adapter=new CustomerViewAdapter(this, this);
+        CustomerViewAdapter adapter=new CustomerViewAdapter(this,
+                dbhelper.getALlCustomerRecords(),
+                this);
 
         //get all records from database and pass it to the setData() odf adapter class
         adapter.setData(dbhelper.getALlCustomerRecords());
